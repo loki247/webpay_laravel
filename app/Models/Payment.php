@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Payment extends Model
 {
     use HasFactory;
-    protected $table = "payments";
+    protected $table = "pagos.payments";
 
     public const STATUS_PENDING_PAYMENT = 0;
 

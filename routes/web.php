@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [\App\Http\Controllers\PaymentController::class, 'index']);
-Route::post("pagos", [\App\Http\Controllers\PaymentController::class, 'store']);
+Route::post("pagos", [\App\Http\Controllers\WebpayController::class, 'iniciarCompra']);

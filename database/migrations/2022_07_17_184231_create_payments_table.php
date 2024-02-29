@@ -13,7 +13,7 @@ class CreatePaymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('pagos.payments', function (Blueprint $table) {
             $table->bigIncrements("id");
             $table->string("session_id");
             $table->float("total", 9, 2);

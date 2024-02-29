@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Payment;
 use Illuminate\Http\Request;
+use Transbank\Webpay\WebpayPlus\Transaction;
 
 class PaymentController extends Controller
 {
@@ -13,7 +14,7 @@ class PaymentController extends Controller
     }
 
     public function store(Request $request){
-        $payment = Payment::create($request->all());
+        $payment = Transaction::create($request->all());
         return view('payments.select_payment_method', compact('payment'));
     }
 }
